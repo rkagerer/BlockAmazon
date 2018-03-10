@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 
 // For this project
-using NetFwTypeLib; // for Firewall API; located in %system32%\FirewallAPI.dll
+using NetFwTypeLib; // for Firewall API; interop generated from %system32%\FirewallAPI.dll
 using System.IO; // for FileNotFound exception class
 using System.Net; // to download stuff from the web
 using System.Runtime.InteropServices; // to marshal Exception.HResult

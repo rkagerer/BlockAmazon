@@ -60,10 +60,10 @@
     <Compile Include="Switches.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <EmbeddedResource Include="Interop.NetFwTypeLib.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Interop.NetFwTypeLib.dll" />
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
