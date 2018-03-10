@@ -10,9 +10,9 @@ The program downloads and parses the list, and creates (or updates) a block rule
 
 The program is a console application (distributed as a self-contained, single-file EXE) which can easily be configured as a Scheduled Task (e.g. to run nightly).  It has minimal requirements and runs on .NET 2.0 (which is included out of the box on every version of Windows since XP).
 
-Anticipating that it might be invoked from a diverse set of tools, the program emits success/failure indicators in several forms:
+Anticipating that it might be invoked from a diverse set of environments, the program emits success/failure indicators in several forms available for consumption:
 
-- It emits a consistent "Completed Successfully" or "Failed" message as its final line of output (with the exception of a few rare cases such as when the /? switch is invoked to show the syntax guide).
+- It writes a consistent "Completed Successfully" or "Failed" message as its final line of output (with the exception of a few rare cases such as when the /? switch is invoked to show the syntax guide).
 - A detailed _%ERRORLEVEL%_ code is set when run from the command line. Best practices are followed by ensuring error code values increase with increasing severity.
 - The full program output can be logged to the Application event log, with sensible icons (Information / Warning / Failed) and distinct (filterable) error codes corresponding to different categories of failure.
 
@@ -20,7 +20,7 @@ Despite all the options, the program is incredibly simple to start using.  Just 
 
     BlockAmazon.exe
 
-To see documentation, run `BlockAmazon /?`:
+For a syntax guide, run `BlockAmazon /?`:
 
     BlockAmazon v1.0.2
     
@@ -29,7 +29,7 @@ To see documentation, run `BlockAmazon /?`:
       /E Log an event in the Application event log of Windows containing the program output
       /? Show this help message (and don't emit a success/failure indicator)
 
-If you set this up as a scheduled, the account it runs under requires rights to create (first time it's run) and modify (subsequent runs) rules in Windows Firewall.  For the non-security-paranoid, I find it easiest to simply configure the task as follows:
+If you set this up as a scheduled task, the account it runs under requires rights to create (first time it's run) and modify (subsequent runs) rules in Windows Firewall.  For the non-security-paranoid, I find it easiest to simply configure the task as follows:
 
 ![alt text](https://i.imgur.com/DwzPmnH.png")
 
